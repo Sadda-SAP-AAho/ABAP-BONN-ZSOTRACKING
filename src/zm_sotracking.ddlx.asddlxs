@@ -1,0 +1,278 @@
+@Metadata.layer: #CUSTOMER
+@UI: {
+  headerInfo: {
+    typeName: 'SO Tracking',
+    typeNamePlural: 'SO Tracking',
+    title: {
+      type: #STANDARD,
+      label: 'ZSOTRACKING',
+      value: 'Invoice'
+    }
+  },
+  presentationVariant: [ {
+    sortOrder: [ {
+      by: 'Invoice',
+      direction: #DESC
+    } ],
+    visualizations: [ {
+      type: #AS_LINEITEM
+    } ]
+  } ]
+}
+annotate entity ZSALESRP_TRACKING
+    with 
+{
+     @UI.facet: [ {
+    id: 'idCollection',
+    type: #COLLECTION,
+    label: 'ZSOTRACKING',
+    position: 10,
+    purpose: #STANDARD
+  }]
+  
+  
+  @UI.lineItem: [ {
+    position: 10 ,
+    importance: #HIGH,
+    label: 'Distribution Channel'
+  }]
+  @UI.identification: [ {
+    position: 10 ,
+    label: 'Distribution Channel'
+  } ]
+   @UI.selectionField: [{ position: 50 , element: 'DistributionChannel' }]
+  DistributionChannel;
+  
+    @UI.lineItem: [ {
+    position: 20 ,
+    importance: #HIGH,
+    label: 'Sales Document'
+  }]
+  @UI.identification: [ {
+    position: 20 ,
+    label: 'Sales Document'
+  } ]
+   @UI.selectionField: [{ position: 40 , element: 'SalesDocument' }]
+  SalesDocument;
+  
+      @UI.lineItem: [ {
+    position: 30 ,
+    importance: #HIGH,
+    label: 'Order Date'
+  }]
+  @UI.identification: [ {
+    position: 30 ,
+    label: 'Order Date'
+  } ]
+  @UI.selectionField: [{ position: 30 , element: 'CreationDate' }]
+  CreationDate;
+  
+      @UI.lineItem: [ {
+    position: 40 ,
+    importance: #HIGH,
+    label: 'Order Time'
+  }]
+  @UI.identification: [ {
+    position: 40 ,
+    label: 'Order Time'
+  } ]
+  CreationTime;
+  
+        @UI.lineItem: [ {
+    position: 50 ,
+    importance: #HIGH,
+    label: 'Customer'
+  }]
+  @UI.identification: [ {
+    position: 50 ,
+    label: 'Customer'
+  } ]
+    @UI.selectionField: [{ position: 20 , element: 'Customer' }]
+    @Consumption.valueHelpDefinition: [{ entity:{ element: 'Customer', name: 'I_Customer' } }]
+  Customer;
+  
+    @UI.lineItem: [ {
+    position: 60 ,
+    importance: #HIGH,
+    label: 'Customer Name'
+  }]
+  @UI.identification: [ {
+    position: 60 ,
+    label: 'Customer Name'
+  } ]
+  CustomerName;
+  
+    @UI.lineItem: [ {
+    position: 70 ,
+    importance: #HIGH,
+    label: 'Customer Ref No'
+  }]
+  @UI.identification: [ {
+    position: 70 ,
+    label: 'CustomerRef No'
+  } ]
+  CustomerRef;
+  
+  @UI.selectionField: [{ position: 10 , element: 'Plant' }]
+   @Consumption.valueHelpDefinition: [{ entity:{ element: 'Plant' ,name: 'I_PlantStdVH'} }]
+  Plant;
+  
+      @UI.lineItem: [ {
+    position: 80 ,
+    importance: #HIGH,
+    label: 'Order Qty'
+  }]
+  @UI.identification: [ {
+    position: 80 ,
+    label: 'Order Qty'
+  } ]
+  OrderQty;
+  
+    
+  @UI.lineItem: [ {
+    position: 90 ,
+    importance: #HIGH,
+    label: 'Order Amount'
+  }]
+  @UI.identification: [ {
+    position: 90 ,
+    label: 'Order Amount'
+  } ]
+  OrderAmount;
+  
+  
+      
+  @UI.lineItem: [ {
+    position: 100 ,
+    importance: #HIGH,
+    label: 'Rate/KG'
+  }]
+  @UI.identification: [ {
+    position: 100 ,
+    label: 'Rate/KG'
+  } ]
+  RatePerKG;
+  
+    @UI.lineItem: [ {
+    position: 110 ,
+    importance: #HIGH,
+    label: 'Finance Approval'
+  }]
+  @UI.identification: [ {
+    position: 110 ,
+    label: 'Finance Approval'
+  } ]
+  FinApp;
+    
+    
+    @UI.lineItem: [ {
+    position: 120 ,
+    importance: #HIGH,
+    label: 'Outbound Delivery'
+  }]
+  @UI.identification: [ {
+    position: 1200 ,
+    label: 'Outbound Delivery'
+  } ]
+  ODD;
+  
+  
+      @UI.lineItem: [ {
+    position: 130 ,
+    importance: #HIGH,
+    label: 'Outbound Delivery ItemQuantity'
+  }]
+  @UI.identification: [ {
+    position: 130 ,
+    label: 'Outbound Delivery Quantity'
+  } ]
+  ODDQty;
+  
+      
+//    @UI.lineItem: [ {
+//    position: 130 ,
+//    importance: #HIGH,
+//    label: 'Outbound Delivery Item'
+//  }]
+//  @UI.identification: [ {
+//    position: 130 ,
+//    label: 'Outbound Delivery Item'
+//  } ]
+//  ODDItem;
+  
+  @UI.lineItem: [ {
+    position: 140 ,
+    importance: #HIGH,
+    label: 'PGI'
+  }]
+  @UI.identification: [ {
+    position: 140 ,
+    label: 'PGI'
+  } ]
+  PGI;
+  
+    
+  @UI.lineItem: [ {
+    position: 150 ,
+    importance: #HIGH,
+    label: 'Invoice'
+  }]
+  @UI.identification: [ {
+    position: 150 ,
+    label: 'Invoice'
+  } ]
+  Invoice;
+  
+      
+  @UI.lineItem: [ {
+    position: 160 ,
+    importance: #HIGH,
+    label: 'Eway Bill'
+  }]
+  @UI.identification: [ {
+    position: 160 ,
+    label: 'Eway Bill'
+  } ]
+  Eway;
+  
+      
+  @UI.lineItem: [ {
+    position: 170 ,
+    importance: #HIGH,
+    label: 'Bill Qty'
+  }]
+  @UI.identification: [ {
+    position: 170 ,
+    label: 'Bill Qty'
+  } ]
+  InvoiceQty;
+  
+  
+    @UI.lineItem: [ {
+    position: 180 ,
+    importance: #HIGH,
+    label: 'Bill Amount'
+  }]
+  @UI.identification: [ {
+    position: 180 ,
+    label: 'Bill Amount'
+  } ]
+  InvoiceAmount;
+
+    @UI.lineItem: [ {
+    position: 190 ,
+    importance: #HIGH,
+    label: 'Amount Diff'
+  }]
+  @UI.identification: [ {
+    position: 190 ,
+    label: 'Amount Diff'
+  } ]
+  AmtDiff;  
+  
+  
+  
+  
+  
+    
+}

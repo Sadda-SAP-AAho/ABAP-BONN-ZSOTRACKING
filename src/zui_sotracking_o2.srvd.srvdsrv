@@ -1,0 +1,4 @@
+@EndUserText.label: 'Sales Tracking V2 Service Definition'
+define service ZUI_SOTRACKING_O2 {
+  expose ZSALESRP_TRACKING as SOTracking;
+}

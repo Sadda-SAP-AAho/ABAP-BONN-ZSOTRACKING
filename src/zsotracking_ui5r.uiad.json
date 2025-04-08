@@ -1,0 +1,34 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "SO Tracking",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD"
+  },
+  "ui5AppDetails": {
+    "appId": "zsotracking"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_269D4FC8EF506EEAC0F51FE6E4BEA75457377023_TM",
+    "semanticObject": "ZSOTRACKING",
+    "action": "List",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_269D4FC8EF506EEAC0F51FE6E4BEA75457377023_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "SO Tracking",
+        "subtitle": "ZSOTracking"
+      }
+    }
+  ]
+}
