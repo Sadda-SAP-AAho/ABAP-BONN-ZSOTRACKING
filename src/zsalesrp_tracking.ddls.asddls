@@ -12,6 +12,8 @@ define custom entity ZSALESRP_TRACKING
   CustomerName                : name1_gp;
   @Semantics.quantity.unitOfMeasure: 'QtyUnit'
   OrderQty                    : meng15;
+  @Semantics.quantity.unitOfMeasure: 'QtyUnit'
+  OrderQtyPerKG               : meng15;
   @Semantics.amount.currencyCode: 'AmountUnit'
   OrderAmount                 : abap.curr(15,2); // WERTV8
   @Semantics.amount.currencyCode: 'AmountUnit'
