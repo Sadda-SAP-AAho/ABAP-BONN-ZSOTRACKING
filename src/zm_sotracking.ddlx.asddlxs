@@ -1,4 +1,4 @@
-@Metadata.layer: #CUSTOMER
+@Metadata.layer: #CORE
 @UI: {
   headerInfo: {
     typeName: 'SO Tracking',
@@ -132,11 +132,11 @@ annotate entity ZSALESRP_TRACKING
       @UI.lineItem: [ {
     position: 90 ,
     importance: #HIGH,
-    label: 'Order Qty Per KG'
+    label: 'Order Qty KG'
   }]
   @UI.identification: [ {
     position: 90 ,
-    label: 'Order Qty Per KG'
+    label: 'Order Qty KG'
   } ]
   OrderQtyPerKG;
   
@@ -281,5 +281,61 @@ annotate entity ZSALESRP_TRACKING
     label: 'Amount Diff'
   } ]
   AmtDiff;  
+  
+  
+      @UI.lineItem: [ {
+    position: 210 ,
+    importance: #HIGH,
+    label: 'Status'
+  }]
+  @UI.identification: [ {
+    position: 210 ,
+    label: 'Status'
+  } ]
+  Status;  
+  
+      @UI.lineItem: [ {
+    position: 220 ,
+    importance: #HIGH,
+    label: 'ODN Invoice'
+  }]
+  @UI.identification: [ {
+    position: 220 ,
+    label: 'ODN Invoice'
+  } ]
+  ODNNo;  
+  
+  @UI.lineItem: [ {
+    position: 230 ,
+    importance: #HIGH,
+    label: 'Cancelled'
+  }]
+  @UI.identification: [ {
+    position: 230 ,
+    label: 'Cancelled'
+  } ]
+  Cancelled; 
+  
+  @UI.lineItem: [ {
+    position: 240 ,
+    importance: #HIGH,
+    label: 'CY'
+  }]
+  @UI.identification: [ {
+    position: 240 ,
+    label: 'CY'
+  } ]
+  ControllingAreaCurrency;   
+  
+  @UI.lineItem: [ {
+    position: 250 ,
+    importance: #HIGH,
+    label: 'Quantity Diff'
+  }]
+  @UI.identification: [ {
+    position: 250 ,
+    label: 'Quantity Diff'
+  } ]
+  QtyDIff;   
   
 }

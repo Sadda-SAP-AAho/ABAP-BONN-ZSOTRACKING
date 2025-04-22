@@ -24,9 +24,9 @@ define custom entity ZSALESRP_TRACKING
   @Semantics.quantity.unitOfMeasure: 'QtyUnit'
   ODDQty                      : abap.quan( 13, 3 );
 //  ODDItem                     : vgpos;
-  PGI                         : abap.char(3);
+  PGI                         : mblnr;
   Eway                        : abap.char(3);
-  FinApp                      : abap.char(3);
+  FinApp                      : abap.char(15);
   @Semantics.quantity.unitOfMeasure: 'QtyUnit'
   InvoiceQty                  : fkimg;
   @Semantics.amount.currencyCode: 'AmountUnit'
@@ -35,4 +35,10 @@ define custom entity ZSALESRP_TRACKING
   @Semantics.amount.currencyCode: 'AmountUnit'
   AmtDiff                     : abap.curr(15,2);
   Plant                       : werks_d;
+  Status                      : abap.char(6);
+  ODNNo                       : xblnr1;
+  Cancelled                   : abap.char(3);
+  ControllingAreaCurrency     : waers;
+  @Semantics.quantity.unitOfMeasure: 'QtyUnit'
+  QtyDIff                     : meng15;
 }
